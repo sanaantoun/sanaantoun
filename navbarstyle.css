@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+.navbarr{
+    margin-right: auto;
+    margin-left: auto;
+    border-color: white;
+    border-style: solid;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+
+    background-color: rgb(31, 31, 31);
+}
+.navbarr ul{
+    list-style-type: none;
+    text-align: center;
+}
+.menbarr{
+    display: inline-block;
+    padding: 14px 3%;
+    width: max-content;
+
+    border-radius: 4px;
+}
+.navbarr ul li a{
+    font-weight: 550;
+    text-decoration: none;
+    color: rgb(215, 215, 215);
+}
+.navbarr ul li:hover a{
+    color: white;
+
+    transition: all ease-in-out 140ms;
+}
+
+.navbarr ul li ul{
+    display: none;
+    position: absolute;
+    margin-top: 14px;
+    margin-left: -1%;
+    border-radius: 0px 0px 6px 6px;
+
+    background-color: rgb(15, 15, 15);
+}
+.dropdown{
+    display: list-item;
+    padding: 8px 15.5px;
+    text-align: left;
+    border-radius: 6px;
+
+    margin-left: -31.5%;
+}
+.dropdown a{
+    color: rgb(213, 213, 213);
+}
+.navbarr ul li ul li a{
+    font-size: 13px;
+    color: rgb(213, 213, 213);
+}
+.navbarr ul li:hover ul{
+    display: block;
+}
+.navbarr ul li ul li:hover a{
+    color: rgb(215, 215, 215);
+
+    transition: all ease-in-out 140ms;
+}

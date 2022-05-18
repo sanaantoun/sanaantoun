@@ -1,0 +1,6 @@
+.phonecontact{
+    margin-top: 34px;
+}
+.phonecontact, .emailcontact{
+    padding-left: 4%;
+}

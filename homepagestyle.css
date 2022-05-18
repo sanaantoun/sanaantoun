@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+.visitaisles, .viewflyer, .contactus{
+    font-size: 1em;
+}
+.visitaisles{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 80%;
+    background-image: url(/Images/differentfoods.jpeg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    border-radius: 4px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.visitaisles p a{
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    opacity: none;
+}
+.gobutton{
+    padding: 5px 16px;
+    margin-left: 1%;
+    border-radius: 10px;
+    border: 1px solid rgb(180, 180, 180);
+
+    cursor: pointer;
+    background-color: white;
+
+    font-weight: 500;
+    font-size: 12px;
+
+    opacity: 0.6;
+}
+.visitaisles:hover{
+    opacity: 1;
+    transition: all ease-in-out 250ms;
+}
+
+.viewflyer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 80%;
+    background-image: url(/Images/savingsimg.jpeg);
+    background-size: cover;
+    background-position: right;
+    opacity: 0.6;
+    border-radius: 4px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.viewflyer p a{
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    opacity: none;
+}
+.gobutton{
+    padding: 5px 16px;
+    margin-left: 1%;
+    border-radius: 10px;
+    border: 1px solid rgb(180, 180, 180);
+
+    cursor: pointer;
+    background-color: white;
+
+    font-weight: 500;
+    font-size: 12px;
+
+    opacity: 0.6;
+}
+.viewflyer:hover{
+    opacity: 1;
+    transition: all ease-in-out 250ms;
+}
+
+.contactus{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 80%;
+    background-image: url(/Images/contactusimg.jpeg);
+    background-size: cover;
+    background-position: right;
+    opacity: 0.6;
+    border-radius: 4px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.contactus p a{
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    opacity: none;
+}
+.gobutton{
+    padding: 5px 16px;
+    margin-left: 1%;
+    border-radius: 10px;
+    border: 1px solid rgb(180, 180, 180);
+
+    cursor: pointer;
+    background-color: white;
+
+    font-weight: 500;
+    font-size: 12px;
+
+    opacity: 0.6;
+}
+.contactus:hover{
+    opacity: 1;
+    transition: all ease-in-out 250ms;
+}
