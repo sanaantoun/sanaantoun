@@ -1,0 +1,27 @@
+.fruitsandveggiewelcmess table{
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 60%;
+
+    border-radius: 4px;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    text-align: center;
+
+    color: white;
+    font-size: 24px;
+    font-family: cursive;
+    font-weight: 800;
+
+    background-image: url(/Images/fruitsandvegbg.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+@media screen and (max-width: 1100px) {
+    .fruitsandveggiewelcmess table{
+        width: 80%;
+    }
+}

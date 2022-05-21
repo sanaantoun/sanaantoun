@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product list</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./assignment1.css">
+  <link rel="stylesheet" type="text/css" href="./navbar.css">
+  <script type="text/javascript" src="./assignment1_p7.js"></script>
+  <script type="text/javascript" src="./assignment3_p7.js"></script>
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .column {
+      float: left;
+      padding: 20px;
+      height: 2100px;
+    }
+
+    .left {
+      width: 16%;
+    }
+
+    .right {
+      width: 84%;
+    }
+
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <body>
+    <header class="head">
+      <h1 class="Ayce">
+        <p>AYCE</p>
+      </h1>
+    </header>
+    <div class="navbar">
+      <nav>
+        <ul>
+          <li class="menbar"><a href="index.php">Home</a></li>
+          <li class="menbar"><a href="aisles.php">
+            Aisles
+            <ul>
+              <li class="dropdown"><a href="meat.php">Meat</a></li>
+              <li class="dropdown"><a href="fruitsandveggies.php">Fruits & Vegetables</a></li>
+              <li class="dropdown"><a href="meat.php">Charcuterie</a></li>
+              <li class="dropdown"><a href="meat.php">Cheese</a></li>
+              <li class="dropdown"><a href="meat.php">Bakery</a></li>
+              <li class="dropdown"><a href="meat.php">Fish & Seafood</a></li>
+            </ul>
+          </a></li>
+          <li class="menbar"><a href="weeklyflyer.php">Flyer</a></li>
+          <li class="menbar"><a href="contact.php">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <div class="row">
+      <div class="column left" style="background-color:#333946;">
+        <h3> Tool-Bar</h3>
+        <input type="button" id ="add_item" class="btn-info btn-info" value="1) Product Page" onclick="location.href='./assignment1_p7.html';switchPage()">
+        <br></br>
+        <input type="button" id ="add_item" class="btn-info btn-info" value="2) User Page" onclick="location.href='./assignment1_p9.html';switchPage()">
+        <br></br>
+        <input type="button" id ="add_item" class="btn-info btn-info" value="3) Shipping Order Page" onclick="location.href='./assignment1_p11.html';switchPage()">
+      </div>
+      <div class="column right" style="background-color:white;">
+        <table id="productTable" class="table table-striped ">
+
+          <h1>Product List</h1>
+
+          <h3>Aisle 1</h3>
+          <h4>Meat Section</h4>
+          <thead>
+            <tr>
+
+              <th>Name</th>
+              <th>Brand</th>
+              <th>Price (CAD)</th>
+              <th>Weight/Volume</th>
+              <th>Quantity</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="row1">
+
+              <td>Ribeye Steak</td>
+              <td>Canada Beef</td>
+              <td>22.22/lbs</td>
+              <td>220-250g</td>
+              <td>150</td>
+              <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="editItem(this,1)" /></td>
+              <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem(this)" /></td>
+
+            </tr>
+            
+
+            <tr id="row2">
+
+              <td>Whole Chicken</td>
+              <td>Royal</td>
+              <td>3.99/lbs</td>
+              <td>200-225g</td>
+              <td>210</td>
+              <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="editItem(this, 2)" /></td>
+              <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem(this)" /></td>
+
+            </tr>
+
+            <tr id="row3">
+
+              <td>Pork Shoulder Blade</td>
+              <td>Canada Beef</td>
+              <td>4.49/lbs</td>
+              <td>210-230g</td>
+              <td>143</td>
+              <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="editItem(this, 3)" /></td>
+              <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem(this)" /></td>
+            </tr>
+
+            <tr id="row4">
+
+              <td>Boneless Chicken Breast</td>
+              <td>Royal</td>
+              <td>4.49/lbs</td>
+              <td>90-100g</td>
+              <td>257</td>
+              <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="editItem(this, 4)" /></td>
+              <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem(this)" /></td>
+            </tr>
+            <script>
+              function deleteItem(){
+                document.getElementById("row1").remove();
+
+              }
+            </script>
+          </tbody>
+        </table>
+
+        <table id="productTable2" class="table table-striped">
+
+          <h3>Aisle 2</h3>
+          <h4>Fruit Section</h4>
+          <thead>
+            <tr>
+
+              <th>Name</th>
+              <th>Brand</th>
+              <th>Price (CAD)</th>
+              <th>Weight/Volume</th>
+              <th>Quantity</th>
+              <th>Edit</th>
+              <th>Delete</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+
+              <td>Red Apples</td>
+              <td>Produce for Kids</td>
+              <td>0.99</td>
+              <td>0.95g</td>
+              <td>500</td>
+              <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+              <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+            </tr> 
+
+            <tr>
+
+              <td>Oranges</td>
+              <td>Sami Fruits</td>
+              <td>1.49</td>
+              <td>0.90g</td>
+              <td>436</td>
+              <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+              <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+            </tr>
+
+            <tr>
+
+              <td>Tomatoes</td>
+              <td>Sami Fruits</td>
+              <td>1.69</td>
+              <td>0.90g</td>
+              <td>278</td>
+              <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+              <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+            </tr>
+
+            <tr>
+
+              <td>Bell Peppers</td>
+              <td>Sami Fruits</td>
+              <td>1.29</td>
+              <td>1.10g</td>
+              <td>178</td>
+              <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+              <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+            </tr>
+
+            <tr>
+
+              <td>Romaine Lettuce</td>
+              <td>Musselman's</td>
+              <td>3.59</td>
+              <td>1.60g</td>
+              <td>300</td>
+              <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+              <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+            </tr>
+
+            <tr>
+
+              <td>Yollow onions</td>
+              <td>Fresh Experts</td>
+              <td>0.69</td>
+              <td>1.00g</td>
+              <td>156</td>
+              <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+              <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table id="productTable3" class="table table-striped"> 
+          <tr>
+            <h3>Aisle 3</h3>
+            <h4>Charcuterie</h4>
+            <thead>
+              <tr>
+
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Price (CAD)</th>
+                <th>Weight/Volume</th>
+                <th>Quantity</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tr>
+              <td>White Ham</td>
+              <td>Canada Beef</td>
+              <td>17.99/lbs</td>
+              <td>220-215g</td>
+              <td>175</td>
+              <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+              <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+            </tr>
+
+            <tr>
+              <td>Rosted Turkey</td>
+              <td>Royal</td>
+              <td>14.99/lbs</td>
+              <td>250-275g</td>
+              <td>225</td>
+              <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+              <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+            </tr>
+
+            <tr>
+              <td>Salami</td>
+              <td>Royal</td>
+              <td>6.39</td>
+              <td>25g</td>
+              <td>405</td>
+              <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+              <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+            </tr>
+
+            <tr>
+              <td>Prosciutto</td>
+              <td>Ermite</td>
+              <td>6.49</td>
+              <td>5-7g</td>
+              <td>75</td>
+              <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+              <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+            </tr>
+          </table>
+
+          <table table id="productTable4" class="table table-striped">
+
+
+            <h3>Aisle 4</h3>
+            <h4>Cheese Section</h4>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Price (CAD)</th>
+                <th>Weight/Volume</th>
+                <th>Quantity</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>Mozarrella Block</td>
+                <td>Ermite</td>
+                <td>4.99</td>
+                <td>5g</td>
+                <td>100</td>
+                <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+                <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+              </tr>
+
+              <tr>
+                <td>Cheddar Block</td>
+                <td>Ermite</td>
+                <td>6.99</td>
+                <td>10g</td>
+                <td>59</td>
+                <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+                <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+              </tr>
+
+              <tr>
+                <td>Sliced Gruyere</td>
+                <td>Ermite</td>
+                <td>9.99</td>
+                <td>5g</td>
+                <td>103</td>
+                <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+                <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+              </tr>
+
+              <tr>
+                <td>Blue Cheese</td>
+                <td>Ermite</td>
+                <td>7.99</td>
+                <td>15g</td>
+                <td>75</td>
+                <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+                <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+
+          <table table id="productTable5" class="table table-striped">
+
+            <h3>Aisle 5</h3>
+            <h4>Dessert Section</h4>
+            <thead>
+
+              <tr>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Price (CAD)</th>
+                <th>Weight/Volume</th>
+                <th>Quantity</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>Red Velvet Cupcakes</td>
+                <td>Store Brand</td>
+                <td>4.99</td>
+                <td>25g</td>
+                <td>150</td>
+                <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+                <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+              </tr>
+
+              <tr>
+                <td>Original Glaze Donuts</td>
+                <td>Store Brand</td>
+                <td>6.99</td>
+                <td>30g</td>
+                <td>76</td>
+                <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+                <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+              </tr>
+
+              <tr>
+                <td>Bluberry Muffins</td>
+                <td>Store Brand</td>
+                <td>4.99</td>
+                <td>25g</td>
+                <td>115</td>
+                <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+                <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+              </tr>
+
+              <tr>
+                <td>Cheesecake</td>
+                <td>Store Brand</td>
+                <td>9.99</td>
+                <td>55g</td>
+                <td>45</td>
+                <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+                <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table table id="productTable6" class=" table table-striped">
+
+            <h3>Aisle 6</h3>
+            <h4>Fish Section</h4>
+            <thead>
+
+              <tr>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Price (CAD)</th>
+                <th>Weight/Volume</th>
+                <th>Quantity</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>Atlantic Salmon</td>
+                <td>Fishmonger</td>
+                <td>17.99/lbs</td>
+                <td>175g</td>
+                <td>9</td>
+                <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+                <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+              </tr>
+
+              <tr>
+                <td>Fresh Cod</td>
+                <td>Fishmonger</td>
+                <td>12.99/lbs</td>
+                <td>130</td>
+                <td>15</td>
+                <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+                <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+              </tr>
+
+              <tr>
+                <td>Shrimp (bag of 340g)</td>
+                <td>Fishmonger</td>
+                <td>14.99/lbs</td>
+                <td>340g</td>
+                <td>25</td>
+                <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+                <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+              </tr>
+
+              <tr>
+                <td>Scallops (340g)</td>
+                <td>Fishmonger</td>
+                <td>9.99</td>
+                <td>340g</td>
+                <td>32</td>
+                <td><input type="button" class="edit_item btn-warning" value="Edit" onclick="location.href='./assignment1_p8.html';editItem()" /></td>
+                <td><input type="button" class="delete_item btn-danger" value="Delete" onclick="deleteItem()" /></td>
+              </tr>
+            </tbody>
+
+          </table>
+          <input type="button" id="add_item" class="btn-info btn-primary" value="Add Item +" onclick="location.href='./assignment1_p8.html';addItem()">   
+        </body>
+        </html>
+      </div>
+    </div>
+
+  </body>
+  </html>
+
