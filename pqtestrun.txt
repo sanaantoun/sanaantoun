@@ -1,0 +1,5 @@
+             N=10000       Insert(k,v) ms       Remove(k,v) ms
+   MyPQUnsortedArray                    2                  336
+    MyPQUnsortedList                  336                    4
+     MyPQSortedArray                    4                  343
+      MyPQSortedList                  343                  358
