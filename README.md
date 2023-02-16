@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @sanaantoun
 - 🌱 I’m currently enrolled at Concordia University in Software Engineering
--  I’m seeking interships for Fall 2022
+-  I’m seeking interships for Summer 2023
 - 📫 antounsana@gmail.com https://www.linkedin.com/in/sana-antoun/
 
 <!---
